@@ -36,6 +36,66 @@ A sophisticated 64-bit DLL injector for Counter-Strike 2, inspired by Shtreeba b
   * Theme Support - Customizable appearance
   * Tray Integration - Minimize to system tray
 
+## Building CS2 Injector
+
+### Prerequisites
+
+1. **Windows 10 or 11** (64-bit)
+2. **Visual Studio 2019 or newer** with the following components:
+   - C++ Desktop Development workload
+   - Windows 10/11 SDK
+   - MSVC v142 or newer build tools
+
+### Build Steps
+
+1. **Open the solution file**
+   - Double-click on `CS2Injector.sln` to open it in Visual Studio
+
+2. **Select build configuration**
+   - Set to `Release | x64` in the Visual Studio toolbar
+
+3. **Build the solution**
+   - Press `Ctrl+Shift+B` or select Build → Build Solution from the menu
+   - Alternatively, right-click on the solution in Solution Explorer and select "Build Solution"
+
+4. **Find the built files**
+   - After a successful build, the binaries will be in the `bin\Release` folder
+   - The UI application is `CS2Injector.exe`
+   - The injection library is `CS2Injector.dll`
+
+### Running the Injector
+
+1. Run `CS2Injector.exe` **as administrator** (right-click → Run as administrator)
+2. Select the target process (CS2)
+3. Select or browse for the DLL to inject
+4. Choose your preferred injection method (Manual Map is recommended)
+5. Click "Inject"
+
+### Command Line Options
+
+The injector supports the following command line options:
+
+- `-inject`: Automatically inject the DLL at startup
+- `-process <name>`: Specify the target process name
+- `-dll <path>`: Specify the DLL path
+- `-method <number>`: Specify the injection method (0: LoadLibrary, 1: Manual Map, 2: Thread Hijacking, 3: Shellcode)
+- `-silent`: Enable silent mode (automatically close after injection)
+- `-minimize`: Start minimized to tray
+- `-exit`: Exit after injection
+
+Example: `CS2Injector.exe -process cs2.exe -dll myhack.dll -method 1 -inject`
+
+### Troubleshooting
+
+- **Missing DLL errors**: Ensure you have the Microsoft Visual C++ Redistributable for Visual Studio 2019/2022 installed
+- **Access denied errors**: Run as administrator
+- **Injection fails**: Try a different injection method or check if the target process is protected
+- **UI does not appear**: Check if the application is minimized to the system tray
+
+### Warning
+
+This tool is provided for educational purposes only. Using it to modify online games may violate terms of service agreements and result in account bans. Use at your own risk and only on private, offline servers that you own or have permission to modify.
+
 ## Getting Started
 
 ### Prerequisites

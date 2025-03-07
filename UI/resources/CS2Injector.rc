@@ -1,0 +1,72 @@
+#include "resource.h"
+#include <windows.h>
+
+// Icon
+IDI_APP_ICON ICON "icon.ico"
+
+// Main Menu
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open DLL...",               IDC_BROWSE_BUTTON
+        MENUITEM SEPARATOR
+        MENUITEM "&Inject",                    IDC_INJECT_BUTTON
+        MENUITEM "&Refresh Process List",      IDC_REFRESH_BUTTON
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                      IDC_EXIT_BUTTON
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&Options...",                IDC_SETTINGS_BUTTON
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                  IDC_ABOUT_BUTTON
+    END
+END
+
+// Tray Menu
+IDR_TRAYMENU MENU
+BEGIN
+    MENUITEM "&Inject",                        IDC_INJECT_BUTTON
+    MENUITEM SEPARATOR
+    MENUITEM "&Refresh Process List",          IDC_REFRESH_BUTTON
+    MENUITEM SEPARATOR
+    MENUITEM "&Settings",                      IDC_SETTINGS_BUTTON
+    MENUITEM "&About",                         IDC_ABOUT_BUTTON
+    MENUITEM SEPARATOR
+    MENUITEM "&Restore",                       1
+    MENUITEM SEPARATOR
+    MENUITEM "E&xit",                          IDC_EXIT_BUTTON
+END
+
+// Version information
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4" // U.S. English, multilingual character set
+        BEGIN
+            VALUE "CompanyName",      "CS2Injector Contributors"
+            VALUE "FileDescription",  "CS2 Injector - Educational DLL Injector"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "CS2Injector"
+            VALUE "LegalCopyright",   "Copyright (c) 2023-2024 CS2Injector Contributors"
+            VALUE "OriginalFilename", "CS2Injector.exe"
+            VALUE "ProductName",      "CS2 Injector"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252 // U.S. English, Windows ANSI codepage
+    END
+END 

@@ -2,30 +2,9 @@
 #include "../include/ConfigManager.h"
 #include "../../Library/include/Injector.h"
 #include "../../Common/include/Definitions.h"
+#include "../resources/resource.h"
 #include <commctrl.h>
 #include <shellapi.h>
-
-// Resource IDs (would normally be in resource.h)
-#define IDI_APP_ICON            100
-#define IDR_MAINMENU            101
-#define IDR_TRAYMENU            102
-#define IDD_SETTINGS            103
-#define IDD_ABOUT               104
-
-// Control IDs
-#define IDC_PROCESS_COMBO       1001
-#define IDC_DLL_PATH_EDIT       1002
-#define IDC_BROWSE_BUTTON       1003
-#define IDC_METHOD_COMBO        1004
-#define IDC_INJECT_BUTTON       1005
-#define IDC_REFRESH_BUTTON      1006
-#define IDC_STATUS_TEXT         1007
-#define IDC_SETTINGS_BUTTON     1008
-#define IDC_ABOUT_BUTTON        1009
-#define IDC_EXIT_BUTTON         1010
-
-// Window message for tray icon
-#define WM_TRAYICON             (WM_USER + 1)
 
 // Window class name
 #define WINDOW_CLASS_NAME       L"CS2Injector_Window_Class"
