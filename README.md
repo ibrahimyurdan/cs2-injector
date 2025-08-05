@@ -1,3 +1,5 @@
+### WORK IN PROGRESS
+
 # CS2 Injector
 
 A sophisticated 64-bit DLL injector for Counter-Strike 2, inspired by Shtreeba but designed for modern games and anti-cheat systems.
